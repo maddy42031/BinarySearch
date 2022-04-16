@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+::selection {
+  background-color: hotpink;
+}
+body {
+  background-color: rgb(31, 31, 42);
+  color: rgb(214, 215, 223);
+  font-family: "Rubik", Courier, monospace;
+}
+nav {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+#navContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#navContainer > p {
+  font-family: "Rubik Glitch", sans-serif;
+  transition: all 0.2s ease-out;
+  cursor: default;
+  letter-spacing: 0.1rem;
+  background: -webkit-linear-gradient(
+    40deg,
+    rgb(46, 183, 128),
+    rgb(79, 87, 195),
+    rgb(249, 101, 175)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glitch;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  font-size: 4rem;
+  animation-delay: 1s;
+}
+#navContainer > img {
+  filter: drop-shadow(0px -5px 7px rgb(74, 194, 152));
+  animation: danceLogo;
+  animation-duration: 3s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  transition: 0.4s;
+}
+#navContainer > img:hover {
+  filter: drop-shadow(0px 0px 7px rgb(209, 20, 118));
+}
+@keyframes danceLogo {
+  0% {
+    transform: translateY(-5px);
+  }
+  50% {
+    filter: drop-shadow(0px -5px 7px rgb(209, 74, 118));
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(-5px);
+  }
+}
+.heading {
+  text-align: center;
+  background: -webkit-linear-gradient(
+    60deg,
+    rgb(55, 191, 175),
+    rgb(42, 176, 129)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 600;
+}
+.bg {
+  background-color: palevioletred;
+  height: 5rem;
+  padding: 1rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 5px;
+}
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #3494e6 0%,
+    #ec6ead 51%,
+    #3494e6 100%
+  );
+}
+.btn-grad {
+  margin: 10px;
+  padding: 15px 25px;
+  text-align: center;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  transition: 0.5s;
+  border: none;
+  background-size: 200% auto;
+  font-size: 1.1rem;
+  color: aliceblue;
+  border-radius: 5px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+.listDiv {
+  background-color: rgb(24, 24, 38);
+  border-radius: 10px;
+  color: rgb(193, 193, 198);
+  font-size: 1.2rem;
+}
+.contactLogo {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  width: max-content;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+  transition: all .3s;
+}
+.contactLogo > a {
+  text-decoration: none;
+  color:aliceblue;
+}
+.contactLogo:hover{
+  text-decoration: underline;
+}
+.instagram>a{
+  text-decoration: none;
+  color: paleturquoise;
+}
+.instagram>a:hover{
+  text-decoration: underline;
+}
+@media only screen and (max-width: 500px) {
+  #navContainer > p {
+    font-size: 3.2rem;
+  }
+}
